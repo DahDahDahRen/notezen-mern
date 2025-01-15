@@ -1,5 +1,5 @@
-const { createCustomError } = require("../utils/customError");
 const Note = require("../model/NoteModel");
+const { createCustomError } = require("../utils/customError");
 
 //! Action: GET
 //! Get all notes documents from DB
