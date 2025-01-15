@@ -18,6 +18,7 @@ app.use("/v1/notezen", router);
 
 //! Custome error handler
 app.use(customErrorHandler);
+
 //! Handler for non-existing route
 app.use(notFoundHandler);
 
