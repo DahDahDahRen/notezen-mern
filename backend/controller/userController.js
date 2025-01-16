@@ -1,5 +1,5 @@
-const bcrypt = require("bcrypt");
 const User = require("../model/UserModel");
+const bcrypt = require("bcrypt");
 const generateToken = require("../utils/generateToken");
 const { createCustomError } = require("../utils/customError");
 

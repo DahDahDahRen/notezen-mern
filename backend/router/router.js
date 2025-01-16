@@ -12,6 +12,7 @@ const {
   deleteAllUserController,
   loginUserController,
 } = require("../controller/userController");
+const protectedRoute = require("../middleware/protectedRoute");
 
 //! Notes RESTful Routes
 router.get("/", getNoteController).post("/", createNoteController);
@@ -21,7 +22,7 @@ router
 
 //! User RESTful Routes
 router.post("/user/register", registerNewUserController);
-router.get("/user/all", getAllUsersController);
+router.get("/user/all", protectedRoute, getAllUsersController);
 router.delete("/user/delete", deleteAllUserController);
 router.post("/user/login", loginUserController);
 
