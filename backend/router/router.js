@@ -10,6 +10,7 @@ const {
   registerNewUserController,
   getAllUsersController,
   deleteAllUserController,
+  loginUserController,
 } = require("../controller/userController");
 
 //! Notes RESTful Routes
@@ -22,5 +23,6 @@ router
 router.post("/user/register", registerNewUserController);
 router.get("/user/all", getAllUsersController);
 router.delete("/user/delete", deleteAllUserController);
+router.post("/user/login", loginUserController);
 
 module.exports = router;
