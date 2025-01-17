@@ -142,13 +142,19 @@ textarea {
   font-weight: var(--font-700);
 }
 
+.main-container {
+  display: grid;
+  grid-template-rows: 1fr 8fr;
+  /* border: 2px solid pink; */
+}
+
 /* Header Container */
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-5) var(--spacing-6);
+  padding: var(--spacing-5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.077);
 }
 
@@ -183,4 +189,63 @@ textarea {
   background: none;
   color: var(--secondary-color);
   border: none;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 2fr 6fr 2fr;
+  /* border: 2px solid rgb(9, 255, 0); */
+}
+
+/* .main-content > * {
+  border: 2px solid red;
+} */
+
+.notes-container {
+  padding: var(--spacing-5) var(--spacing-5) 0 var(--spacing-5);
+  border-right: 2px solid rgba(255, 255, 255, 0.077);
+}
+
+.note-display-container {
+  padding: var(--spacing-5) var(--spacing-5) 0 var(--spacing-5);
+  border-right: 2px solid rgba(255, 255, 255, 0.077);
+}
+
+.note-input-container {
+  margin-bottom: var(--spacing-4);
+}
+
+.note-item-card {
+  padding: var(--spacing-4);
+  border-radius: 2px;
+  margin-bottom: var(--spacing-4);
+  background-color: hsla(199, 74%, 15%, 0.355);
+}
+
+.btn-create {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 6px;
+  padding: var(--spacing-4) 0;
+  font-size: var(--font-size-5);
+  font-weight: var(--font-700);
+  letter-spacing: var(--ls-decrease);
+  line-height: var(--line-height-1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.note-tags-container,
+.note-date-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.note-tags-list {
+  display: flex;
 }

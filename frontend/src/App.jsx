@@ -110,9 +110,9 @@ function App() {
           </header>
 
           <div className="main-content">
-            <div>
-              <div className="input-container">
-                <button>Create Note</button>
+            <div className="notes-container">
+              <div className="note-input-container">
+                <button className="btn-create">Create Note</button>
               </div>
 
               <ul className="note-list">
@@ -120,7 +120,7 @@ function App() {
                   <div className="note-item-card">
                     <h3>React Basics</h3>
 
-                    <div className="tags-container">
+                    <div className="note-tags-container">
                       <span>Tags</span>
 
                       <ul className="note-tags-list">
@@ -129,7 +129,7 @@ function App() {
                       </ul>
                     </div>
 
-                    <div className="date-container">
+                    <div className="note-date-container">
                       <span>Date</span>
                       <span>25 January 2025</span>
                     </div>
@@ -138,18 +138,18 @@ function App() {
 
                 <li className="note-item">
                   <div className="note-item-card">
-                    <h3>Express Server</h3>
+                    <h3>React Basics</h3>
 
-                    <div className="tags-container">
+                    <div className="note-tags-container">
                       <span>Tags</span>
 
                       <ul className="note-tags-list">
-                        <li className="note-tag-item">Node</li>
-                        <li className="note-tag-item">JavaScript</li>
+                        <li className="note-tag-item">React</li>
+                        <li className="note-tag-item">Mern</li>
                       </ul>
                     </div>
 
-                    <div className="date-container">
+                    <div className="note-date-container">
                       <span>Date</span>
                       <span>25 January 2025</span>
                     </div>
@@ -158,7 +158,7 @@ function App() {
               </ul>
             </div>
 
-            <div className="note-container">
+            <div className="note-display-container">
               <header className="note-header">
                 <h2>React Basics</h2>
               </header>
