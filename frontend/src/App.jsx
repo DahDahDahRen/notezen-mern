@@ -1,12 +1,25 @@
-import { House, ChevronRight, Archive } from "lucide-react";
+import { useState } from "react";
+import {
+  House,
+  ChevronRight,
+  Archive,
+  Tags,
+  Search,
+  Settings,
+} from "lucide-react";
+import NotezenLogo from "./components/ui/NotezenLogo";
 
 function App() {
+  const [searchInput, setSearchInput] = useState(
+    "Search by title, content, or tags..."
+  );
+
   return (
     <>
       <div className="app-layout">
         <nav className="nav-container">
           <div className="nav-logo-container">
-            <span className="nav-logo">Notezen</span>
+            <NotezenLogo />
           </div>
 
           <div className="folder-container">
@@ -21,7 +34,7 @@ function App() {
 
             <div className="folder-notes">
               <div className="folder-notes-content">
-                <Archive size={16} />{" "}
+                <Archive size={16} />
                 <span className="folder-name">Archived Notes</span>
               </div>
             </div>
@@ -31,10 +44,42 @@ function App() {
             <p className="tag-title">Tags</p>
 
             <ul className="tags-list">
-              <li className="tags-item">
-                <div>
-                  <span className="tag-count">2</span>
-                  React
+              <li className="tag-item">
+                <div className="tag-item-content">
+                  <Tags size={16} />
+                  <span className="tag-item-content-text">React</span>
+                </div>
+              </li>
+
+              <li className="tag-item">
+                <div className="tag-item-content">
+                  <Tags size={16} />
+                  <span className="tag-item-content-text">Web Development</span>
+                </div>
+              </li>
+
+              <li className="tag-item">
+                <div className="tag-item-content">
+                  <Tags size={16} />
+                  <span className="tag-item-content-text">Design System</span>
+                </div>
+              </li>
+
+              <li className="tag-item">
+                <div className="tag-item-content">
+                  <Tags size={16} />
+                  <span className="tag-item-content-text">
+                    Frontend Development
+                  </span>
+                </div>
+              </li>
+
+              <li className="tag-item">
+                <div className="tag-item-content">
+                  <Tags size={16} />
+                  <span className="tag-item-content-text">
+                    Fullstack Development
+                  </span>
                 </div>
               </li>
             </ul>
@@ -43,15 +88,23 @@ function App() {
 
         <main className="main-container">
           <header className="header-container">
-            <h1>All Notes</h1>
+            <h1 className="heading-one">All Notes</h1>
 
-            <div>
-              <form>
-                <input type="text" value="Search Notes" />
+            <div className="header-input-controller">
+              <form className="search-form-controller">
+                <Search size={16} />
+
+                <input
+                  type="text"
+                  className="search-input"
+                  value={searchInput}
+                />
               </form>
 
-              <div className="avatar-container">
-                <span className="avatar-img"></span>
+              <div className="setting-container">
+                <button className="btn-setting">
+                  <Settings />
+                </button>
               </div>
             </div>
           </header>

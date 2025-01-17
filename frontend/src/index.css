@@ -77,7 +77,8 @@ textarea {
 
 .nav-container {
   background-color: var(--neutral-color);
-  padding: 0 16px;
+  padding: 0 var(--spacing-6);
+  border-right: 1px solid rgba(255, 255, 255, 0.077);
 }
 
 .nav-logo-container {
@@ -89,7 +90,7 @@ textarea {
   justify-content: space-between;
   align-items: center;
 
-  padding: var(--spacing-4) var(--spacing-3);
+  padding: var(--spacing-4) 0;
 }
 
 .folder-name {
@@ -118,9 +119,68 @@ textarea {
   color: var(--neutral-color-2);
 }
 
+.tag-item-content {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-5) 0;
+  gap: var(--spacing-3);
+}
+
+.tag-item-content-text {
+  font-size: 14px;
+}
+
+.notezen-logo {
+  width: 120px;
+  height: 120px;
+}
+
 .heading-one {
   line-height: var(--line-height-1);
   letter-spacing: var(--ls-decrease);
-  font-size: var(--font-size-1);
-  font-weight: var(--font-900);
+  font-size: var(--font-size-3);
+  font-weight: var(--font-700);
+}
+
+/* Header Container */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-5) var(--spacing-6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.077);
+}
+
+.header-input-controller {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+}
+
+.search-form-controller {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  border: 2px solid rgba(255, 255, 255, 0.077);
+  border-radius: var(--spacing-3);
+  padding: var(--spacing-4);
+}
+
+.search-input {
+  width: 240px;
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.btn-setting {
+  cursor: pointer;
+  background: none;
+  color: var(--secondary-color);
+  border: none;
 }
