@@ -193,7 +193,7 @@ textarea {
 
 .main-content {
   display: grid;
-  grid-template-columns: 2fr 6fr 2fr;
+  grid-template-columns: 3fr 6fr 2fr;
   /* border: 2px solid rgb(9, 255, 0); */
 }
 
@@ -248,4 +248,130 @@ textarea {
 
 .note-tags-list {
   display: flex;
+}
+
+.note-item-title {
+  font-size: var(--font-size-4);
+  line-height: var(--line-height-1);
+  letter-spacing: var(--ls-decrease);
+  font-weight: var(--font-700);
+  margin-bottom: 4px;
+}
+
+.note-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: var(--font-600);
+  padding: 2px 8px;
+  margin-right: 8px;
+  border-radius: 8px;
+  background-color: hsla(199, 69%, 23%, 0.873);
+  color: #a2bcc8;
+}
+
+.note-main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.note-item-date {
+  font-size: 14px;
+  font-weight: var(--font-600);
+  color: hsla(200, 9%, 46%, 0.848);
+}
+
+.note-bin-container {
+  padding: var(--spacing-5) var(--spacing-5) 0 var(--spacing-5);
+}
+
+.bin-item {
+  border: 2px solid rgba(255, 255, 255, 0.171);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.bin-item-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 14px;
+  font-weight: var(--font-600);
+  letter-spacing: var(--ls-decrease);
+  line-height: var(--line-height-1);
+}
+
+.note-display-container {
+  position: relative;
+  /* border: 2px red solid; */
+}
+
+.note-control-panel {
+  position: absolute;
+  padding: var(--spacing-6) 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.note-control-content {
+  padding: 0 var(--spacing-5);
+}
+
+.note-header {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.171);
+  padding-bottom: 16px;
+}
+
+.heading-two {
+  font-size: var(--font-size-2);
+  line-height: var(--line-height-1);
+  letter-spacing: var(--ls-decrease);
+}
+
+.note-detail-tags,
+.note-detail-edited {
+  display: flex;
+  padding: 12px 0;
+}
+
+.note-detail-icon {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+  width: 140px;
+}
+
+.note-label {
+  font-size: 14px;
+  font-weight: var(--font-600);
+  line-height: var(--line-height-1);
+  letter-spacing: var(--ls-decrease);
+}
+
+.btn-save {
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: var(--ls-decrease);
+  line-height: var(--line-height-1);
+  background-color: var(--accent-color);
+  padding: var(--spacing-4) var(--spacing-7);
+}
+
+.note-detail-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-delete {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: rgb(189, 69, 45);
 }

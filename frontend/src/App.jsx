@@ -1,4 +1,6 @@
 import { useState } from "react";
+import NoteItemCard from "./components/ui/NoteItemCard";
+import NoteDetail from "./components/ui/NoteDetail";
 import {
   House,
   ChevronRight,
@@ -6,6 +8,7 @@ import {
   Tags,
   Search,
   Settings,
+  Trash2,
 } from "lucide-react";
 import NotezenLogo from "./components/ui/NotezenLogo";
 
@@ -117,59 +120,30 @@ function App() {
 
               <ul className="note-list">
                 <li className="note-item">
-                  <div className="note-item-card">
-                    <h3>React Basics</h3>
-
-                    <div className="note-tags-container">
-                      <span>Tags</span>
-
-                      <ul className="note-tags-list">
-                        <li className="note-tag-item">React</li>
-                        <li className="note-tag-item">Mern</li>
-                      </ul>
-                    </div>
-
-                    <div className="note-date-container">
-                      <span>Date</span>
-                      <span>25 January 2025</span>
-                    </div>
-                  </div>
+                  <NoteItemCard />
                 </li>
 
                 <li className="note-item">
-                  <div className="note-item-card">
-                    <h3>React Basics</h3>
-
-                    <div className="note-tags-container">
-                      <span>Tags</span>
-
-                      <ul className="note-tags-list">
-                        <li className="note-tag-item">React</li>
-                        <li className="note-tag-item">Mern</li>
-                      </ul>
-                    </div>
-
-                    <div className="note-date-container">
-                      <span>Date</span>
-                      <span>25 January 2025</span>
-                    </div>
-                  </div>
+                  <NoteItemCard />
                 </li>
               </ul>
             </div>
 
-            <div className="note-display-container">
-              <header className="note-header">
-                <h2>React Basics</h2>
-              </header>
-            </div>
+            <NoteDetail />
 
             <div className="note-bin-container">
               <div className="bin-item">
-                <span>Deleted Note</span>
+                <span className="bin-item-link">
+                  <Archive size={16} />
+                  Archived Note
+                </span>
               </div>
+
               <div className="bin-item">
-                <span>Deleted Note</span>
+                <span className="bin-item-link">
+                  <Trash2 size={16} />
+                  Deleted Note
+                </span>
               </div>
             </div>
           </div>
