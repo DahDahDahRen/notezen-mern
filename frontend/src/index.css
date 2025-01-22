@@ -375,3 +375,80 @@ textarea {
   border: none;
   color: rgb(189, 69, 45);
 }
+
+.modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(0, 0, 0, 0.267);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-control-panel {
+  position: relative;
+  left: 300px;
+  margin-bottom: 8px;
+}
+
+.create-note-form {
+  width: 580px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  background-color: hsla(199, 74%, 15%, 0.992);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.input-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: var(--ls-decrease);
+  line-height: var(--line-height-1);
+  margin-bottom: 8px;
+}
+
+.btn-modal {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+}
+
+.input-text {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: var(--line-height-2);
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #ffb80351;
+  background: none;
+  outline: none;
+  background-color: #02182342;
+  color: var(--secondary-color);
+}
+
+.input-text:focus {
+  border: 2px solid #ffb803e7;
+  background-color: #1c6d967f;
+}
+
+.form-section {
+  margin-bottom: 12px;
+}
+
+.form-heading {
+  font-size: var(--font-size-2);
+  line-height: var(--line-height-1);
+  letter-spacing: var(--ls-decrease);
+  margin-bottom: 24px;
+}
